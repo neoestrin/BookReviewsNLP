@@ -1,0 +1,43 @@
+DESCRIPTION
+
+Data: Book Reviews
+
+
+Description of data: The data is available in a file named 'book_reviews.csv'. This data must be read and saved into a DataFrame using Python.
+
+
+The data consists of two features, text and label respectively. 'text' consists of review comments and 'label' consists of one of the two encoded values, '__label__1' or '__label__2' where '__label__1' represents negative sentiment and '__label__2' represents positive sentiment.
+
+
+Task: You, as a Data Scientist, have to analyse this data using techniques from NLP and Machine Learning as per the steps mentioned below:
+
+Questions:
+
+Note: Refer the 'Output Format' section for details on all output files to be created.
+
+1. Read the data using the steps provided while writing the code and store it in a DataFrame. Write the total number of rows of the DataFrame to an output file.
+2. Count the number of terms generated from this data by following the below steps:
+3. Use TweetTokenizer to create tokens from 'text' column
+4. Use CountVectorizer to create ngrams
+5. Set analyzer as 'word'
+6. Use words by converting them to lowercase
+7. Create unigrams (set the appropriate ngram_range)
+8. Write the number of unigrams generated above to an output file
+9. Split the DataFrame into Train/Test using the steps described below:
+10. Use 'text' as independent variable
+11. Use 'label' as dependent variable
+12. Split in the ratio Train/Test = 70/30
+13. Use random_state = 100
+14. Perform Vectorization using steps described below:
+15. Use an appropriate vectorizer and apply it to transform both X_train and X_test (Save the results into X_train_idf & X_test_idf respectively)
+16. Set max_features=1000
+17. Calculate IDF weights for all the extracted features
+18. Sort the IDF weights and write the 5 highest IDF values to an output file
+19. Perform Multinomial Naive Bayes Classification on the data using steps described below:
+	a) Create a model by fitting it to X_train_idf and y_train
+	b) Predict values of y using X_test_idf
+	c) Calculate accuracy of this model
+	d) Write the value of accuracy rounded to 3 decimal places
+	e) Calculate confusion matrix using predicted and testing values of y and write the matrix to an output file
+
+
